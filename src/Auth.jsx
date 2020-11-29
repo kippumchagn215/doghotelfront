@@ -27,7 +27,7 @@ function Auth() {
       password: Password,
     };
 
-    axios.post("/api/login", user).then((res) => {
+    axios.post("/login", user).then((res) => {
       if (res.data === false) {
         alert("User does not exist or Incorrect password");
       } // print if user doesn't exist or password is wrong
