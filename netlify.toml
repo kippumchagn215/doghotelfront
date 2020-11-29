@@ -8,4 +8,3 @@
   to = "https://damp-thicket-92600.herokuapp.com/"
   status = 200
   force = true
-  headers = {X-From = "Netlify"}
