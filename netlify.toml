@@ -1,6 +1,6 @@
 [[redirects]]
   from = "/*"
-  to = "/index.html"
+  to = "https://api.mysearch.com"
   status = 200
 
   [[redirects]]
