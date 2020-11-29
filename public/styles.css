@@ -1,0 +1,335 @@
+h1{
+    font-family: "Montserrat", sans-serif;
+    font-size: 50px;
+    text-align: left;
+    color:white;
+
+}
+h2,h3,h5{
+    font-family: "Montserrat", sans-serif;
+    color:white;
+}
+
+h4{
+    font-family: "Montserrat", sans-serif;
+    color:white;
+    text-align: left;
+}
+h6{
+    padding-top: 1%;
+    text-align: right;
+}
+a{
+    color: black;
+}
+
+
+/* Heading */
+#headings{
+    text-align: center;
+    padding: 4% 8% 3% 10%;
+    background-color: #790c5a;
+}
+.Angel-img{
+    border:solid;
+    border-color: white;
+    border-width: 10px;
+    transform: rotate(7deg);
+    width: 350px;
+}
+.heading-btn{
+    margin-top: 100px;
+    width: 100%;
+}
+.heading-div{
+    z-index: 2;;
+}
+.angel-div{
+    z-index: 1;
+}
+
+/* Features */
+#features{
+    background-color: #bc6ff1;
+    text-align: center;
+    padding-bottom:3%;
+}
+.feature-icon{
+    margin: 7% auto;
+    font-size: 50px;
+}
+
+
+/* Services */
+#services{
+    padding: 3% 3%;
+    text-align: center;
+    background-color: #790c5a;
+}
+.card{
+    border-radius: 100%;
+    margin-top: 20px;
+    padding: 1%;
+}
+.card-img{
+    border-radius: 100%;
+    margin: 0 auto;
+    width: 100%;
+    height: 600px;
+}
+.card-body{
+    margin-top: 8%;
+}
+.card-div{
+    padding-top: 1%;
+}
+
+/* Testimonial */
+#testimonials{
+    text-align: center;
+    background-color: #ff4c68;
+    font-weight: 500;
+    padding: 0% 12%;
+}
+.carousel-item{
+    padding: 6% 22%;
+}
+.carousel-img{
+    margin: 50px auto;
+    height:220px;
+    width:200px;
+    border-radius: 100%;
+}
+
+
+
+/* Footer */
+#footers{
+    padding-top: 2%;
+    text-align: center;
+    background-color: lightblue;
+}
+/* Email sub section */
+.email-sub{
+    padding-bottom: 1.5%;
+}
+.sub-btn{
+height: 44px;
+}
+.sub-input{
+height: 44px;
+width: 500px;
+}
+/* Booking section */
+.btn-book{ 
+    margin-top: 1%;
+    margin-bottom:2%;
+    width: 30%;
+    background-color: #00bcd4;
+}
+
+/* Follow*/
+#follows{
+    padding: 2% 3% 1%;
+    background-color: #333333;
+    text-align: center;
+    font-family: 'Lobster', cursive;
+}
+.follow-heading{
+    font-family: 'Lobster', cursive;
+}
+.follow-icon{
+    color:pink;
+    margin: 10px 20px 1px;
+    font-size: 50px;
+}
+
+/* Error */
+.error-msg{
+    color:black;
+}
+
+/* Pricing */
+/* Want to add little space between cards but since each card takes 1/3 if you expand the width it destroys the format */
+#pricings{
+    text-align: center;
+    padding: 5% 5%;
+    background-color: #f5a25d;
+}
+.card-contents{
+    border-radius: 5%;
+    margin-top: 2%;
+    padding: 2% 0.3%;
+    border-width: 2px;
+    border-style: solid;
+    padding-top: 3%;
+}
+
+/* Your Booking */
+#yourbookings{
+    padding: 3% 5%;
+}
+.booking-header{
+    font-family: Arial, Helvetica, sans-serif;
+    color:black;
+    margin-bottom: 30px;
+}
+.booking-items{
+     /* width:70vw;  */
+}
+.yourbooking-bold{
+    margin-left: 30px;
+}
+.yourbooking-btn{
+    outline-style: none;
+    border-radius: 100%;
+    margin-left: 10px;
+}
+.yourbooking-btn:focus{
+    outline-style: none;
+    border-radius: 100%;
+    margin-left: 10px;
+}
+.booking-details{
+    margin-top: 10px;
+    margin-left: 30px;
+}
+/* Sign in page yo */
+.form-signin{
+    width: 55vh;
+    margin: 0 auto;
+    text-align: center;
+}
+.signin-heading{
+    text-align: center;
+    color: black;
+}
+.signin-img{
+    margin-top: 40px;
+    border-radius: 10%;
+    border-width: 7px;
+    border-style: groove;
+    height: 18vh;
+    width: 40%;
+}
+.signin-background{
+    left: 0; 
+    right: 0; 
+    margin: 0 auto;
+    width: 100vh;
+    height: 100vh;
+    z-index: -1;
+    display: inline-block;
+    margin: 0 auto;
+    position:absolute;
+}
+
+/* Create Account  */
+.signup-background{
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    position:absolute;
+}
+.signup-div{
+    padding: 3% 38%;
+}
+.signup-form{
+    background-color: white;
+    border: solid;
+    padding: 10% 18%;
+    text-align: center;
+}
+.signup-btn{
+    /* width: 300px;
+    height: 45px; */
+}
+.signup-input{
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+/* Help */
+.helps-div{
+    margin: 2% 8%;
+    padding: 3% 3%;
+}
+.topics-div{
+    font-weight: bold;
+}
+.list-btn{
+    text-align: left;
+    margin: 0;
+    padding: 0 ;
+    border:0;
+}
+.list-btn:focus{
+    outline:0;
+}
+.help-btn{
+    outline-style: none;
+    border-radius: 100%;
+}
+.help-btn:focus{
+    outline-style: none;
+    border-radius: 100%;
+}
+.help-detail{
+    margin-top: 1%;
+    margin-left: 3%;
+}
+
+/* Checkout */
+.checkout-heading{
+    color: black;
+
+}
+.checkout-btn{
+    margin-bottom: 3%;
+}
+.calendar{
+    max-width: 53%;
+    margin-bottom: 50px;
+}
+   
+abbr{
+    text-decoration: underline!important;
+    font-weight: bold;
+}
+.react-calendar__tile:visited{
+    background-color:#51adcf;
+}
+
+/* CartItem */
+.cartitem-roomprice{
+    text-align: left;
+}
+.cartitem-list{
+    margin-top: 10px;
+}
+
+/* Createsuccesspage */
+.Createsuccess-header{
+    margin-top: 50px;
+    text-align: center;
+    color: black;
+}
+.Createsuccess-link{
+    color:blue;
+    text-decoration: underline;
+}
+
+/* Confirmationpage */
+.confirm-div{
+    text-align: center;
+}
+.confirm-header{
+    margin-top: 5%;
+    color:black;
+}
+.confirm-detail{
+    color:black;
+}
+.confirm-span{
+    font-family: Arial, Helvetica, sans-serif;
+}
