@@ -29,6 +29,7 @@ function Auth() {
     };
 
     axios.post(url + "/login", user).then((res) => {
+      console.log(res.data);
       if (res.data === false) {
         alert("User does not exist or Incorrect password");
       } // print if user doesn't exist or password is wrong
