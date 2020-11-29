@@ -1,2 +1,2 @@
-/api/* https://damp-thicket-92600.herokuapp.com/  200
+/api/* https://damp-thicket-92600.herokuapp.com/:splat  200
 /*  /index.html  200
