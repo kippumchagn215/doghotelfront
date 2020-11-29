@@ -8,6 +8,7 @@ function Pricing() {
     axios
       .get("https://damp-thicket-92600.herokuapp.com/test")
       .then(function (res) {
+        console.log(res);
         if (res.data !== true) {
           history.push("/signin");
         } else {
