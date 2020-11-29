@@ -5,13 +5,15 @@ import axios from "axios";
 function Pricing() {
   const history = useHistory();
   const RouteChange = (price, room, description) => {
-    axios.get("/test").then(function (res) {
-      if (res.data !== true) {
-        history.push("/signin");
-      } else {
-        history.push("/checkout", { price, room, description });
-      }
-    });
+    axios
+      .get("https://damp-thicket-92600.herokuapp.com/test")
+      .then(function (res) {
+        if (res.data !== true) {
+          history.push("/signin");
+        } else {
+          history.push("/checkout", { price, room, description });
+        }
+      });
   };
 
   return (

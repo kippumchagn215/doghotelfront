@@ -14,9 +14,11 @@ function YourBooking() {
       history.push("/signin");
     } else {
       // when does useeffect run?? thought hooks also renders page,so if useffect runs only one time and set hook renders then, it should also result in infinite loop but it doesn't y?
-      axios.post("/yourbooking").then(function (res) {
-        setAllBooking(res.data.booking);
-      });
+      axios
+        .post("https://damp-thicket-92600.herokuapp.com/yourbooking")
+        .then(function (res) {
+          setAllBooking(res.data.booking);
+        });
     }
   }, []);
   return (

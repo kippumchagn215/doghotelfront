@@ -5,7 +5,9 @@ function GoogleSuccess() {
   const history = useHistory();
   // can you run this without await?? hm not sure but dont think so
   async function test() {
-    const response = await axios.get("/test");
+    const response = await axios.get(
+      "https://damp-thicket-92600.herokuapp.com/test"
+    );
     console.log(response.data);
     if (response.data === true) {
       localStorage.setItem("current", true);

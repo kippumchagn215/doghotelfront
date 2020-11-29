@@ -82,7 +82,6 @@ function App() {
           <Route exact path="/checkout" component={Checkoutpage} />
           <Route exact path="/confirmation" component={Confirmationpage} />
           <Route exact path="/createsuccess" component={Createsuccesspage} />
-          <Route exact path="/test" component={Testpage} />
           <Route exact path="/404" component={Notfound} />
           <Redirect to="/404" />
         </Switch>

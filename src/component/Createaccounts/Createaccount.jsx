@@ -14,9 +14,9 @@ function Createaccount() {
   const [Clicked, setClicked] = useState(false);
   const [Data, setData] = useState([]);
   const history = useHistory();
-
+  const url = "https://damp-thicket-92600.herokuapp.com";
   useEffect(function () {
-    axios.get("/signup").then((res) => {
+    axios.get(url + "/signup").then((res) => {
       // how can u parse it when the obj was sent in json form, component mount blah blahs, await, sync ?
       setData(res.data);
     });
@@ -36,7 +36,9 @@ function Createaccount() {
       return element.username === EmailAddress;
     });
     if (dup.length == 0) {
-      axios.post("/signup", new_user).then((res) => console.log(res.data));
+      axios
+        .post(url + "/signup", new_user)
+        .then((res) => console.log(res.data));
       history.push("/createsuccess");
     } else {
       alert(
