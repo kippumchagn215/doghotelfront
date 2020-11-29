@@ -9,7 +9,6 @@ import { useHistory } from "react-router-dom";
 import axios from "axios";
 
 const authContext = createContext();
-const url = "https://damp-thicket-92600.herokuapp.com";
 function ProvideAuth({ children }) {
   const history = useHistory();
   const [auth, setAuth] = useState(Auth());
@@ -28,8 +27,7 @@ function Auth() {
       password: Password,
     };
 
-    axios.post(url + "/login", user).then((res) => {
-      console.log(res.data);
+    axios.post("/login", user).then((res) => {
       if (res.data === false) {
         alert("User does not exist or Incorrect password");
       } // print if user doesn't exist or password is wrong
@@ -41,7 +39,7 @@ function Auth() {
   };
 
   const authsignout = function () {
-    axios.get(url + "/logout").then(function (res) {
+    axios.get("/logout").then(function (res) {
       // can you remove then function?
       // only get request shows the information of user
     });
