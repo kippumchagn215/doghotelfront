@@ -27,22 +27,26 @@ function Auth() {
       password: Password,
     };
 
-    axios.post("/login", user).then((res) => {
-      if (res.data === false) {
-        alert("User does not exist or Incorrect password");
-      } // print if user doesn't exist or password is wrong
-      else {
-        localStorage.setItem("current", true); // seems like localstorage can only store string
-        history.push("/"); // if the user is authenticated just take them back to home page
-      }
-    });
+    axios
+      .post("https://damp-thicket-92600.herokuapp.com/login", user)
+      .then((res) => {
+        if (res.data === false) {
+          alert("User does not exist or Incorrect password");
+        } // print if user doesn't exist or password is wrong
+        else {
+          localStorage.setItem("current", true); // seems like localstorage can only store string
+          history.push("/"); // if the user is authenticated just take them back to home page
+        }
+      });
   };
 
   const authsignout = function () {
-    axios.get("/logout").then(function (res) {
-      // can you remove then function?
-      // only get request shows the information of user
-    });
+    axios
+      .get("https://damp-thicket-92600.herokuapp.com//logout")
+      .then(function (res) {
+        // can you remove then function?
+        // only get request shows the information of user
+      });
     localStorage.setItem("current", false);
     // index.js:1 Warning: Cannot update a component (`ProvideAuth`) while rendering a different component (`Logout`). To locate the bad setState() call inside `Logout`, follow the stack trace as described i
   };
