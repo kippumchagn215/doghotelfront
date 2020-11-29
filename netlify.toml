@@ -4,7 +4,7 @@
   status = 200
 
  [[redirects]]
-  from = "/api*"
+  from = "/api/*"
   to = "https://damp-thicket-92600.herokuapp.com/"
   status = 200
   force = true
