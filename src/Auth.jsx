@@ -31,6 +31,7 @@ function Auth() {
       data: user,
       withCredentials: true,
     }).then((res) => {
+      console.log(res.data);
       if (res.data === false) {
         alert("User does not exist or Incorrect password");
       } // print if user doesn't exist or password is wrong
