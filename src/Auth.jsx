@@ -44,6 +44,7 @@ function Auth() {
     axios
       .get("https://damp-thicket-92600.herokuapp.com/logout")
       .then(function (res) {
+        console.log("successful");
         // can you remove then function?
         // only get request shows the information of user
       });
