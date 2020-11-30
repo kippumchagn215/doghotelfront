@@ -26,7 +26,7 @@ function Auth() {
       username: Username,
       password: Password,
     };
-    axios("http://mysite.com/api/things/", {
+    axios("https://damp-thicket-92600.herokuapp.com/login", {
       method: "post",
       data: user,
       withCredentials: true,
