@@ -26,20 +26,19 @@ function Auth() {
       username: Username,
       password: Password,
     };
-
-    axios
-      .post("https://damp-thicket-92600.herokuapp.com/login", user, {
-        withCredentials: true,
-      })
-      .then((res) => {
-        if (res.data === false) {
-          alert("User does not exist or Incorrect password");
-        } // print if user doesn't exist or password is wrong
-        else {
-          localStorage.setItem("current", true); // seems like localstorage can only store string
-          history.push("/"); // if the user is authenticated just take them back to home page
-        }
-      });
+    axios("http://mysite.com/api/things/", {
+      method: "post",
+      data: user,
+      withCredentials: true,
+    }).then((res) => {
+      if (res.data === false) {
+        alert("User does not exist or Incorrect password");
+      } // print if user doesn't exist or password is wrong
+      else {
+        localStorage.setItem("current", true); // seems like localstorage can only store string
+        history.push("/"); // if the user is authenticated just take them back to home page
+      }
+    });
   };
 
   const authsignout = function () {

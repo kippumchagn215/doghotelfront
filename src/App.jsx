@@ -41,6 +41,7 @@ import Checkoutpage from "./pages/Checkoutpage";
 import Confirmationpage from "./pages/Confirmationpage";
 import Createsuccesspage from "./pages/Createsuccesspage";
 import Googlesucpage from "./pages/Googlesucpage";
+import Testpage from "./pages/Testpage";
 
 library.add(
   fab,
@@ -81,6 +82,7 @@ function App() {
           <Route exact path="/checkout" component={Checkoutpage} />
           <Route exact path="/confirmation" component={Confirmationpage} />
           <Route exact path="/createsuccess" component={Createsuccesspage} />
+          <Route exact path="/test" component={Testpage} />
           <Route exact path="/404" component={Notfound} />
           <Redirect to="/404" />
         </Switch>
