@@ -2,7 +2,6 @@ import React from "react";
 import { useHistory } from "react-router-dom";
 import { useAuth } from "../../Auth";
 import PricingItem from "./PricingItem";
-import axios from "axios";
 function Pricing() {
   const use = useAuth();
   const Auth = localStorage.getItem("current") === "true";
