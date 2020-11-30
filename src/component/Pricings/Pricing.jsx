@@ -1,20 +1,18 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
+import { useAuth } from "../../Auth";
 import PricingItem from "./PricingItem";
 import axios from "axios";
 function Pricing() {
+  const use = useAuth();
+  const Auth = localStorage.getItem("current") === "true";
   const history = useHistory();
   const RouteChange = (price, room, description) => {
-    axios
-      .get("https://damp-thicket-92600.herokuapp.com/test")
-      .then(function (res) {
-        console.log(res);
-        if (res.data !== true) {
-          history.push("/signin");
-        } else {
-          history.push("/checkout", { price, room, description });
-        }
-      });
+    if (Auth !== true) {
+      history.push("/signin");
+    } else {
+      history.push("/checkout", { price, room, description });
+    }
   };
 
   return (
