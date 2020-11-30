@@ -28,11 +28,7 @@ function Auth() {
     };
 
     axios
-      .post(
-        "https://damp-thicket-92600.herokuapp.com/login",
-        { withCredentials: true },
-        user
-      )
+      .post("https://damp-thicket-92600.herokuapp.com/login", user)
       .then((res) => {
         if (res.data === false) {
           alert("User does not exist or Incorrect password");
