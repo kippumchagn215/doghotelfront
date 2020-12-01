@@ -8,6 +8,7 @@ function YourBooking() {
   const [Allbooking, setAllBooking] = useState([]);
   const history = useHistory();
   const Auth = localStorage.getItem("current") === "true";
+  console.log(Auth);
   useEffect(function () {
     // when anything changes this is what you should use to update?? but y do i need this when usestate also rerenders and update the
     if (Auth !== true) {
@@ -15,7 +16,9 @@ function YourBooking() {
     } else {
       // when does useeffect run?? thought hooks also renders page,so if useffect runs only one time and set hook renders then, it should also result in infinite loop but it doesn't y?
       axios
-        .post("https://damp-thicket-92600.herokuapp.com/yourbooking")
+        .post("https://damp-thicket-92600.herokuapp.com/yourbooking", {
+          email: localStorage.getItem("id"),
+        })
         .then(function (res) {
           setAllBooking(res.data.booking);
         });
@@ -25,7 +28,7 @@ function YourBooking() {
     <section id="yourbookings">
       <h3 className="booking-header">Your Reservation</h3>
       <ul className="list-group">
-        {Allbooking.length !== 0 ? (
+        {Allbooking.length !== 0 || Allbooking === null ? (
           Allbooking.map((props, index) => (
             <YourBookingItem key={index} userinfo={props} index={index} />
           ))

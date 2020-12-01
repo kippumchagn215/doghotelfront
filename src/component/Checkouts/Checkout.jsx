@@ -77,18 +77,21 @@ function Checkout() {
         new Date().getDate() +
         "/" +
         new Date().getFullYear(),
+      Email: localStorage.getItem("id"),
     };
-    axios.post("/checkout", userinfo).then((res) => {
-      const response = res.data;
-      if (response.data === "error occured while saving") {
-        console.log("error occured while saving");
-        history.push("/checkout");
-      } else {
-        console.log("successfuly inserted");
-        const path = "/confirmation";
-        history.push(path, { userinfo });
-      }
-    });
+    axios
+      .post("https://damp-thicket-92600.herokuapp.com/checkout", userinfo)
+      .then((res) => {
+        const response = res.data;
+        if (response.data === "error occured while saving") {
+          console.log("error occured while saving");
+          history.push("/checkout");
+        } else {
+          console.log("successfuly inserted");
+          const path = "/confirmation";
+          history.push(path, { userinfo });
+        }
+      });
   }
 
   return (
