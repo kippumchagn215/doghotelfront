@@ -33,7 +33,7 @@ function Signin() {
           <h1 className="signin-heading h3 mb-3 font-weight-normal">
             Please sign in
           </h1>
-          <a href="http://localhost:4000/auth/google">
+          <a href="https://damp-thicket-92600.herokuapp.com/auth/google">
             <button className="signup-btn btn-block btn btn-lg btn-light btn-outline-primary">
               <FontAwesomeIcon icon={["fab", "google"]} /> Sign in with Google
             </button>

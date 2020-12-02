@@ -57,7 +57,7 @@ function Createaccount() {
       <div className="signup-div sm-12">
         <div className="signup-form">
           <div className="signup-btn-div">
-            <a href="http://localhost:4000/auth/google">
+            <a href="https://damp-thicket-92600.herokuapp.com/auth/google">
               <button className="signup-btn btn-block btn btn-lg btn-light btn-outline-primary">
                 <FontAwesomeIcon icon={["fab", "google"]} /> Sign up with Google
               </button>
